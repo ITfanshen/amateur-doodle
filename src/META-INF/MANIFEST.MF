@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: YouChat.Server.Server
+Class-Path: hutool-all-5.8.10.jar
+

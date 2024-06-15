@@ -190,7 +190,7 @@ public class ChangePasswordJFrame extends JFrame implements MouseListener {
         //验证码文本
         JLabel codeText = new JLabel("验证码:");
         codeText.setBounds(100, 260, 80, 20);
-        //验证码输入框
+        // 验证码输入框
         verification.setBounds(175, 255, 100, 30);
         verification.addMouseListener(this);
         //正确的验证码

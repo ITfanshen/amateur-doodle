@@ -45,10 +45,10 @@ public class ChatJFrame {
             }
             client.getDataOutputStream().flush();
             GetJDialog.showJDialog("文件上传成功!");
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
             GetJDialog.showJDialog("文件上传失败.");
-            System.out.println(ex.getMessage());
+            System.out.println(e.getMessage());
         }
     }
 

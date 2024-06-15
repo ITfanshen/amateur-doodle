@@ -25,6 +25,13 @@ public class Client {
 
     //创建线程池
     public static ThreadPoolExecutor getPool() {
+        // 1. corePoolSize: 核心线程数
+        // 2. maximumPoolSize: 最大线程数
+        // 3. keepAliveTime: 空闲线程存活时间
+        // 4. 3的单位
+        // 5. workQueue: 任务队列
+        // 6. threadFactory: 线程工厂，表示使用默认的线程工厂来创建新线程。
+        // 7. handler: 拒绝策略，使用了 ThreadPoolExecutor.AbortPolicy()，表示当线程池无法接受新的任务时，将抛出一个 RejectedExecutionException 异常。
         return new ThreadPoolExecutor(
                 3,
                 Runtime.getRuntime().availableProcessors() * 2,

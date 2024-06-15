@@ -80,7 +80,7 @@ public class RegisterJFrame extends JFrame implements MouseListener {
             }
             //8.添加用户
             try {
-                Users.add(new User(username.getText(),String.valueOf(password.getPassword()),IDNumber.getText()));
+                Users.add(new User(username.getText(), String.valueOf(password.getPassword()), IDNumber.getText()));
                 System.out.println(Users);
                 for (User user : Users) {
                     user.setUsername(encrypt(user.getUsername()));

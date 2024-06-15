@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class GetCode {
     public static String getCode() {
+
         //1.创建一个集合
         ArrayList<Character> list = new ArrayList<>();
 

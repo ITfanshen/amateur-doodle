@@ -3,10 +3,13 @@ package YouChat.Util;
 import javax.swing.*;
 
 public class GetJDialog {
+
     //因为展示弹框的代码，会被运行多次
     //所以，我们把展示弹框的代码，抽取到一个类中。以后用到的时候，就不需要写了
     //直接调用就可以了。
+
     public static void showJDialog(String content) {
+
         //创建一个弹框对象
         JDialog jDialog = new JDialog();
         //给弹框设置大小
@@ -27,7 +30,7 @@ public class GetJDialog {
             // 关闭窗口
             jDialog.dispose();
         });
-        //Timer timer2 = new Timer(500, new ActionListener() {
+        //Timer timer2 = new Timer(1000, new ActionListener() {
         //    @Override
         //    public void actionPerformed(ActionEvent e) {
         //        // 关闭窗口
@@ -35,9 +38,13 @@ public class GetJDialog {
         //    }
         //});
         // 设置定时器只执行一次
+
+        //计时器将在执行完一次任务后停止，不会再重复执行
         timer.setRepeats(false);
+
         // 启动定时器
         timer.start();
+
         //弹框展示
         jDialog.setVisible(true);
 

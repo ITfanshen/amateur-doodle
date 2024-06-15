@@ -24,11 +24,11 @@ public class Server {
     public void execute() throws IOException {
         while (true) {
             // 监听客户端套接字，若没有客户端连接，则代码不会往下执行，会堵塞在此处。
+            System.out.println("服务器启动，等待连接...");
             Socket socket = serverSocket.accept();
             System.out.println("客户端连接成功");
             // 开启线程，用于读取客户端发送的信息，并转发给每一个客户端
             new MyServerThread(socket).start();
         }
     }
-
 }
